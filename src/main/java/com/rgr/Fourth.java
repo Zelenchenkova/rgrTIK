@@ -7,9 +7,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-
-public class Second extends Application  implements Function {
-
+public class Fourth extends Application implements Function{
     private Double a;
     private Double b;
 
@@ -57,14 +55,14 @@ public class Second extends Application  implements Function {
         this.dx = dx;
     }
 
-    @Override
+    double dy;
+
     public double getDy() {
-        return 0;
+        return dy;
     }
 
-    @Override
     public void setDy(double dy) {
-
+        this.dy = dy;
     }
 
     public static void main(String[] args) {
@@ -80,7 +78,7 @@ public class Second extends Application  implements Function {
         );
 
         LinePlot linePlot = new LinePlot(
-                x ->  (2*(Math.atan((25*a)/b))+ 3*(Math.pow(Math.cos((9 * x * b) / (b - x)), 2))),
+                x ->  Math.ceil((2*(Math.atan((25*a)/b))+ 3*(Math.pow(Math.cos((9 * x * b) / (b - x)), 2)))/dy)*dy,
                 getXmin(), getXmax(), getDx(),
                 axes
         );
@@ -90,9 +88,8 @@ public class Second extends Application  implements Function {
         );
         layout.setPadding(new Insets(20));
 
-        stage.setTitle("Безперервна функція дискретного аргументу");
+        stage.setTitle("Цифровий сигнал");
         stage.setScene(new Scene(layout, Color.rgb(35, 39, 50)));
         stage.show();
     }
-
 }

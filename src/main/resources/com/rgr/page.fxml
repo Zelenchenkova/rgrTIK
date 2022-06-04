@@ -1,6 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" />
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="816.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rgr.StartController">
+   <children>
+      <Label layoutX="52.0" layoutY="215.0" text="Введіть a:">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="254.0" text="Введіть b:">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="a" layoutX="197.0" layoutY="218.0" prefHeight="27.0" prefWidth="185.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="b" layoutX="196.0" layoutY="257.0" prefHeight="27.0" prefWidth="185.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Button layoutX="52.0" layoutY="351.0" mnemonicParsing="false" onAction="#onAButtonClick" prefHeight="38.0" prefWidth="357.0" text="Аналоговий сигнал">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="423.0" layoutY="215.0" text="Введіть dx:">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="423.0" layoutY="254.0" text="Введіть dy:">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="dx" layoutX="584.0" layoutY="218.0" prefHeight="27.0" prefWidth="185.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="dy" layoutX="584.0" layoutY="257.0" prefHeight="27.0" prefWidth="185.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <ImageView fx:id="picture" fitHeight="85.0" fitWidth="218.0" layoutX="314.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField layoutX="584.0" layoutY="296.0" prefHeight="27.0" prefWidth="185.0" fx:id="xmax">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="196.0" layoutY="296.0" prefHeight="27.0" prefWidth="185.0" fx:id="xmin">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Label layoutX="50.0" layoutY="294.0" text="Введіть xmin:">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="423.0" layoutY="294.0" text="Введіть xmax:">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button layoutX="412.0" layoutY="351.0" mnemonicParsing="false" onAction="#onBButtonClick" prefHeight="38.0" prefWidth="357.0" text="Безперервна функція дискретного аргументу">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="52.0" layoutY="408.0" mnemonicParsing="false" onAction="#onCButtonClick" prefHeight="38.0" prefWidth="357.0" text="Дискретна функція безперервного аргументу">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="412.0" layoutY="408.0" mnemonicParsing="false" onAction="#onDButtonClick" prefHeight="38.0" prefWidth="357.0" text="Цифровий сигнал ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="errorMsg" layoutX="289.0" layoutY="186.0" prefHeight="21.0" prefWidth="239.0" text="Всі поля повинні бути заповнені!">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
